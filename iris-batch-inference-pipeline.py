@@ -1,6 +1,6 @@
 import os
 
-LOCAL = True
+LOCAL = False
 
 def g():
     import pandas as pd
