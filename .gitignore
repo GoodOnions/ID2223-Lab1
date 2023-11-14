@@ -1,2 +1,11 @@
 .idea/
 .env
+iris_model/
+
+actual_iris.png
+
+confusion_matrix.png
+
+df_recent.png
+
+latest_iris.png
