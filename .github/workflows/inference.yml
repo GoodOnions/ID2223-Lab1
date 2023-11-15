@@ -23,3 +23,5 @@ jobs:
 
       - name: execute py script
         run: python iris-batch-inference-pipeline.py
+        env:
+          HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
