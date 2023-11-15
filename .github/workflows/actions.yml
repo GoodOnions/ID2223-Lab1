@@ -23,3 +23,5 @@ jobs:
 
       - name: execute py script
         run: python iris-feature-pipeline-daily.py
+        env:
+          HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
