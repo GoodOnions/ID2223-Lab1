@@ -25,8 +25,8 @@ The main goal is to design and implement the ML pipeline for classification on t
 this steps:
 
 1. [Exploratory Data Analysis (EDA)](./wine/wine-eda-and-backfill-feature-group.ipynb)
-2. Feature engineering and selection with data cleaning
-3. Backfill training data
+2. [Feature engineering and selection with data cleaning](./wine/wine-eda-and-backfill-feature-group.ipynb)
+3. [Backfill training data](./wine/wine-eda-and-backfill-feature-group.ipynb)
 4. Setup of the training pipeline
 5. Setup of the inference pipeline
 6. Setup automatic daily entry generator
