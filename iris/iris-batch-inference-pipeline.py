@@ -70,7 +70,7 @@ def g():
     history_df = pd.concat([history_df, monitor_df])
 
     df_recent = history_df.tail(4)
-    dfi.export(df_recent, './df_recent.png', table_conversion='matplotlib')
+    dfi.export(df_recent, 'df_recent.png', table_conversion='matplotlib')
     dataset_api.upload("./df_recent.png", "Resources/images", overwrite=True)
 
     predictions = history_df[['prediction']]
