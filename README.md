@@ -24,7 +24,7 @@ system.
 The main goal is to design and implement the ML pipeline for classification on the Wine Quality dataset, we have followed
 this steps:
 
-1. Exploratory Data Analysis (EDA)
+1. [Exploratory Data Analysis (EDA)](./wine/wine-eda-and-backfill-feature-group.ipynb)
 2. Feature engineering and selection with data cleaning
 3. Backfill training data
 4. Setup of the training pipeline
