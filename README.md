@@ -27,10 +27,16 @@ this steps:
 1. [Exploratory Data Analysis (EDA)](./wine/wine-eda-and-backfill-feature-group.ipynb)
 2. [Feature engineering and selection with data cleaning](./wine/wine-eda-and-backfill-feature-group.ipynb)
 3. [Backfill training data](./wine/wine-eda-and-backfill-feature-group.ipynb)
-4. Setup of the training pipeline
-5. Setup of the inference pipeline
-6. Setup automatic daily entry generator
+4. [Setup of the training pipeline](./wine/wine-training-pipeline.ipynb)
+5. [Setup of the inference pipeline](./wine/wine-inference-pipeline.py)
+6. [Setup automatic daily entry generator](./wine/wine-daily.py)
 7. Setup of the two frontend applications
+   1. [Realtime inference](./wine/huggingface-wine/app.py)
+   2. [Model performance monitor](./wine/huggingface-wine-monitor/app.py)
+
+### Public links
+1. [Realtime inference](https://huggingface.co/spaces/GoodOnions/ID2223-Lab1-Wine)
+2. [Model performance monitor](https://huggingface.co/spaces/GoodOnions/ID2223-Lab1-Wine-Monitor)
 
 ## References
 

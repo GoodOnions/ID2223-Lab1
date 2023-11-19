@@ -76,4 +76,9 @@ def g():
 
 
 if __name__ == "__main__":
-    g()
+    if LOCAL:
+        from dotenv import load_dotenv
+        load_dotenv()
+        g()
+    else:
+        g()
