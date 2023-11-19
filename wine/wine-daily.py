@@ -51,9 +51,10 @@ def get_random_wine():
     """
     import pandas as pd
     import random
+    import math
 
     # randomly pick one of these 3 and write it to the featurestore
-    pick_random = random.uniform(0, 3)
+    pick_random = math.floor(random.uniform(0, 3))
 
     wine_df = generate_wine(labels[int(pick_random)])
     print(f"{labels[int(pick_random)]} added")
