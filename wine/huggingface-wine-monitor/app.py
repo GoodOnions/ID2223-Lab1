@@ -14,8 +14,8 @@ monitor_fg = fs.get_or_create_feature_group(name="wine_predictions", version=1, 
                                             description="Wine quality Prediction/Outcome Monitoring")
 
 history_df = monitor_fg.read()
-last_prediction = history_df.tail()
-last_prediction = last_prediction[0] if len(last_prediction) > 0 else None
+last_prediction = history_df.tail(1)
+last_prediction = last_prediction.to_dict(orient='records')[0]
 
 with gr.Blocks() as demo:
     with gr.Row():
@@ -24,7 +24,7 @@ with gr.Blocks() as demo:
             gr.Label(f"{labels[last_prediction['prediction']] + ' quality' if last_prediction is not None else 'No predictions yet'}")
         with gr.Column():
             gr.Label("Today's Actual quality")
-            gr.Label(f"{labels[last_prediction['label']] + ' quality' if last_prediction is not None else 'No predictions yet'}")
+            gr.Label(f"{labels[int(last_prediction['label'])] + ' quality' if last_prediction is not None else 'No predictions yet'}")
     with gr.Row():
         with gr.Column():
             gr.Label("Recent Prediction History")
