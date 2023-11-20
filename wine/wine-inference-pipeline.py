@@ -70,20 +70,15 @@ def g():
 
     # Only create the confusion matrix when our iris_predictions feature group has examples of all 3 iris flowers
     print("Number of different wine predictions to date: " + str(predictions.value_counts().count()))
-    if predictions.value_counts().count() == 3:
-        results = confusion_matrix(labels, predictions)
+    results = confusion_matrix(labels, predictions)
 
-        df_cm = pd.DataFrame(results, ['True Low', 'True Medium', 'True High'],
-                             ['Pred Low', 'Pred Medium', 'Pred High'])
+    df_cm = pd.DataFrame(results, ['True Low', 'True Medium', 'True High'],
+                         ['Pred Low', 'Pred Medium', 'Pred High'])
 
-        cm = sns.heatmap(df_cm, annot=True)
-        fig = cm.get_figure()
-        fig.savefig("./wine_confusion_matrix.png")
-        dataset_api.upload("./wine_confusion_matrix.png", "Resources/images", overwrite=True)
-    else:
-        print("You need 3 different wines predictions to create the confusion matrix.")
-        print("Run the batch inference pipeline more times until you get 3 different wine quality predictions")
-
+    cm = sns.heatmap(df_cm, annot=True)
+    fig = cm.get_figure()
+    fig.savefig("./wine_confusion_matrix.png")
+    dataset_api.upload("./wine_confusion_matrix.png", "Resources/images", overwrite=True)
 
 if __name__ == "__main__":
     if LOCAL == True:
